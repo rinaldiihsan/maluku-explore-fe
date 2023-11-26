@@ -8,29 +8,21 @@ const Navbar = () => {
         <img src="/logo.svg" alt="Maluku Explore" />
       </Link>
       <ul className="navbar-nav flex gap-[40px]">
-        <li>
-          <Link to="/" className="">
-            Home
-          </Link>
+        <li className="hover:font-bold transition-all duration-200 ease-in-out">
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/about" className="">
-            About
-          </Link>
+        <li className="hover:font-bold transition-all duration-200 ease-in-out">
+          <Link to="/about">About</Link>
         </li>
-        <li>
-          <Link to="/tour" className="">
-            Tour
-          </Link>
+        <li className="hover:font-bold transition-all duration-200 ease-in-out">
+          <Link to="/tour">Tour</Link>
         </li>
-        <li>
-          <Link to="/blog" className="">
-            Blog
-          </Link>
+        <li className="hover:font-bold transition-all duration-200 ease-in-out">
+          <Link to="/blog">Blog</Link>
         </li>
       </ul>
       <div className="navbar-extra">
-        <Link to="/sign-in" className="bg-myDarkGreen font-semibold px-6 py-3 text-white rounded-[14px]">
+        <Link to="/sign-in" className="bg-myDarkGreen font-semibold px-6 py-3 text-white rounded-[14px] hover:bg-myGreen1 transition-all duration-200 ease-in-out">
           Sign In
         </Link>
         <button className="hidden">
