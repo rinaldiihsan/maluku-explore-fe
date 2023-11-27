@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="navbar flex justify-between font-poppins items-center py-[40px] sticky top-0">
+    <nav className="navbar flex justify-between font-poppins items-center py-[40px] sticky top-0 bg-myWhite">
       <Link to="/" className="navbar-logo w-[220px]">
         <img src="/logo.svg" alt="Maluku Explore" />
       </Link>
