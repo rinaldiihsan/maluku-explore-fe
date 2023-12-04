@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -23,48 +23,15 @@ const Navbar = () => {
       </ul>
 
       <div className="mt-8 tablet:mt-0 navbar-extra">
-        <Link
-          to="/sign-in"
-          className="bg-myDarkGreen font-semibold px-6 py-3 text-white rounded-[14px] hover:bg-myGreen1 transition-all duration-200 ease-in-out"
-        >
+        <Link to="/sign-in" className="bg-myDarkGreen font-semibold px-6 py-3 text-white rounded-[14px] hover:bg-myGreen1 transition-all duration-200 ease-in-out">
           Sign In
         </Link>
         <button className="hidden">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3 4.5H21"
-              stroke="#292D32"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M3 9.5H21"
-              stroke="#292D32"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M3 14.5H21"
-              stroke="#292D32"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M3 19.5H21"
-              stroke="#292D32"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 4.5H21" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M3 9.5H21" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M3 14.5H21" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M3 19.5H21" stroke="#292D32" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </div>
