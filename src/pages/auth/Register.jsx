@@ -28,7 +28,7 @@ const Register = () => {
         </form>
         <p className="font-medium text-sm">
           Already have an account?
-          <Link to="/sign-in" className="text-myDarkGreen font-bold mx-2 hover:text-myGreen1">
+          <Link to="/sign-in" className="text-myDarkGreen font-bold mx-2 hover:text-myGreen1 transition-all duration-200 ease-in-out">
             Sign in here
           </Link>
         </p>
