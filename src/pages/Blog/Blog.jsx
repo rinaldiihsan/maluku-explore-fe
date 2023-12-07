@@ -11,9 +11,6 @@ const Blog = () => {
           <p className="font-normal">Explore more about Maluku!</p>
         </div>
         <Card />
-        <Link to="/blog-detail" className="text-myDarkGreen font-bold mx-2 hover:text-myGreen1">
-          Read More
-        </Link>
       </div>
     </section>
   );
