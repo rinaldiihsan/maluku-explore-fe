@@ -23,7 +23,7 @@ const Card = ({ id, images, nama, tempat }) => {
           <h3>{tempat}</h3>
         </div>
         <a href="/tour" className="px-4 py-2 text-sm rounded-[10px] hover:bg-myBlack hover:text-myWhite transition-all duration-200 ease-in-out" style={{ outline: '2px solid #000' }}>
-          See More
+          See Details
         </a>
       </div>
     </section>
