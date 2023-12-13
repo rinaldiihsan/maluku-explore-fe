@@ -1,7 +1,12 @@
 import React from 'react';
-import pantaiNatsepa from '../../assets/pantai-natsepa.png';
 import { Link } from 'react-router-dom';
 import { HiOutlineMapPin } from 'react-icons/hi2';
+
+import pantaiNatsepa from '../../assets/pantai-natsepa.png';
+import bandaNaira from '../../assets/banda-naira.png';
+import pantaiPintu from '../../assets/pantai-pintu.png';
+import pantaiOra from '../../assets/pantai-ora.png';
+
 
 const Popular = () => {
   const places = [
@@ -13,32 +18,20 @@ const Popular = () => {
     },
     {
       id: 2,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
+      images: bandaNaira,
+      nama: 'Banda Naira',
       tempat: 'Maluku Tengah',
     },
     {
       id: 3,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
+      images: pantaiPintu,
+      nama: 'Pantai Pintu',
       tempat: 'Maluku Tengah',
     },
     {
       id: 4,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
-      tempat: 'Maluku Tengah',
-    },
-    {
-      id: 5,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
-      tempat: 'Maluku Tengah',
-    },
-    {
-      id: 6,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
+      images: pantaiOra,
+      nama: 'Pantai Ora',
       tempat: 'Maluku Tengah',
     },
   ];
