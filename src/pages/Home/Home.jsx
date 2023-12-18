@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { jwtDecode } from 'jwt-decode';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 import Hero from '../../components/Home/Hero';
 import Popular from '../../components/Home/Popular';
 import Comment from '../../components/Home/Comment';
 import Features from '../../components/Home/Features';
 import Navbar from '../../components/Layouts/Navbar/Navbar';
 import Footer from '../../components/Layouts/Footer/Footer';
-import { jwtDecode } from 'jwt-decode';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [token, setToken] = useState('');
