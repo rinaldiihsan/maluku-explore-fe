@@ -17,7 +17,7 @@ const Register = () => {
         email: email,
         password: password,
       });
-      navigate('/sign-in');
+      navigate('/');
     } catch (error) {
       console.log(error);
     }
