@@ -1,7 +1,11 @@
 import React from 'react';
-import pantaiNatsepa from '../../assets/pantai-natsepa.png';
 import { Link } from 'react-router-dom';
 import { HiOutlineMapPin } from 'react-icons/hi2';
+
+import pantaiNatsepa from '../../assets/pantai-natsepa.png';
+import bandaNaira from '../../assets/banda-naira.png';
+import pantaiPintu from '../../assets/pantai-pintu.png';
+import pantaiOra from '../../assets/pantai-ora.png';
 
 const Popular = () => {
   const places = [
@@ -13,32 +17,20 @@ const Popular = () => {
     },
     {
       id: 2,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
+      images: bandaNaira,
+      nama: 'Banda Naira',
       tempat: 'Maluku Tengah',
     },
     {
       id: 3,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
+      images: pantaiPintu,
+      nama: 'Pantai Pintu',
       tempat: 'Maluku Tengah',
     },
     {
       id: 4,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
-      tempat: 'Maluku Tengah',
-    },
-    {
-      id: 5,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
-      tempat: 'Maluku Tengah',
-    },
-    {
-      id: 6,
-      images: pantaiNatsepa,
-      nama: 'Pantai Natsepa',
+      images: pantaiOra,
+      nama: 'Pantai Ora',
       tempat: 'Maluku Tengah',
     },
   ];
@@ -60,12 +52,12 @@ const Popular = () => {
                   <path
                     d="M16.5 18.4662C18.8693 18.4662 20.79 16.5455 20.79 14.1762C20.79 11.8069 18.8693 9.88623 16.5 9.88623C14.1307 9.88623 12.21 11.8069 12.21 14.1762C12.21 16.5455 14.1307 18.4662 16.5 18.4662Z"
                     stroke="#292D32"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                   <path
                     d="M4.9775 11.6738C7.68625 -0.233747 25.3275 -0.219997 28.0225 11.6875C29.6037 18.6725 25.2587 24.585 21.45 28.2425C18.6862 30.91 14.3138 30.91 11.5363 28.2425C7.74125 24.585 3.39625 18.6588 4.9775 11.6738Z"
                     stroke="#292D32"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                   />
                 </svg>
 

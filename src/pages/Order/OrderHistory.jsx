@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../../components/Tour/Card';
-import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 import Navbar from '../../components/Layouts/Navbar/Navbar';
 import Footer from '../../components/Layouts/Footer/Footer';
 
-const Tour = () => {
+const OrderHistory = () => {
   const [token, setToken] = useState('');
   const [expire, setExpire] = useState('');
   const Navigate = useNavigate();
@@ -47,25 +47,13 @@ const Tour = () => {
       return Promise.reject(error);
     }
   );
-
   return (
     <>
       <Navbar />
-      <section className="section2 flex flex-col justify-center font-poppins items-center py-[30px] gap-y-[70px] max-w-[70rem] mx-auto">
-        <div className="flex flex-col items-center gap-y-4">
-          <h1 className="font-clashDisplay font-semibold text-3xl text-center">
-            Lets tour destination about <br />
-            Maluku!
-          </h1>
-          <p className="text-[18px]">Explore more about the destination!</p>
-        </div>
-        <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-x-8 gap-y-10">
-          <Card />
-        </div>
-      </section>
+
       <Footer />
     </>
   );
 };
 
-export default Tour;
+export default OrderHistory;

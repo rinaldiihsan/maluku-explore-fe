@@ -1,24 +1,30 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Tour from "./pages/Tour/Tour";
-import Blog from "./pages/Blog/Blog";
-import Navbar from "./components/Layouts/Navbar/Navbar";
-import Footer from "./components/Layouts/Footer/Footer";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Tour from './pages/Tour/Tour';
+import Blog from './pages/Blog/Blog';
+import BlogDetail from './pages/Blog/BlogDetail';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import TourDetail from './pages/Tour/TourDetail';
+import OrderHistory from './pages/Order/OrderHistory';
 
 function App() {
   return (
     <div className="max-w-6xl px-3 mx-auto">
       <BrowserRouter>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Login />} />
+          <Route path="/sign-up" element={<Register />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/tour" element={<Tour />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog-detail/:id" element={<BlogDetail />} />
+          <Route path="/tour-detail/:id" element={<TourDetail />} />
+          <Route path="/order-history" element={<OrderHistory />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );
