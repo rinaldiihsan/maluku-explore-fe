@@ -7,6 +7,8 @@ import Blog from './pages/Blog/Blog';
 import BlogDetail from './pages/Blog/BlogDetail';
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
+import TourDetail from './pages/Tour/TourDetail';
+import OrderHistory from './pages/Order/OrderHistory';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/tour" element={<Tour />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
+          <Route path="/tour-detail/:id" element={<TourDetail />} />
+          <Route path="/order-history" element={<OrderHistory />} />
         </Routes>
       </BrowserRouter>
     </div>

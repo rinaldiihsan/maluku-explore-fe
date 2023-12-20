@@ -55,14 +55,6 @@ const BlogDetail = () => {
       </>
     );
   }
-
-  const currentDate = new Date(blog.createdAt);
-  const dateFormatter = new Intl.DateTimeFormat('en-GB', {
-    day: '2-digit',
-    month: 'long',
-    year: 'numeric',
-  });
-
   return (
     <>
       <Navbar />

@@ -33,6 +33,9 @@ const Navbar = () => {
         <li className="transition-all duration-200 ease-in-out hover:font-bold">
           <Link to="/blog">Blog</Link>
         </li>
+        <li className="transition-all duration-200 ease-in-out hover:font-bold">
+          <Link to="/order-history">Order History</Link>
+        </li>
       </ul>
 
       <div className="mt-8 tablet:mt-0 navbar-extra">
