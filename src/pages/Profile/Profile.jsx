@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Layouts/Navbar/Navbar';
 import Footer from '../../components/Layouts/Footer/Footer';
 
-const OrderHistory = () => {
+const Profile = () => {
   const [token, setToken] = useState('');
   const [expire, setExpire] = useState('');
   const Navigate = useNavigate();
@@ -48,12 +48,12 @@ const OrderHistory = () => {
     }
   );
   return (
-    <>
+    <div>
       <Navbar />
-      <h1>Order History</h1>
+      <h1>Profile</h1>
       <Footer />
-    </>
+    </div>
   );
 };
 
-export default OrderHistory;
+export default Profile;

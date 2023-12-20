@@ -38,7 +38,32 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <div className="mt-8 tablet:mt-0 navbar-extra">
+      <div className="mt-8 tablet:mt-0 navbar-extra flex gap-x-3 items-center">
+        <Link to="/profile">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.2001 21.3C20.0834 21.2834 19.9334 21.2834 19.8001 21.3C16.8668 21.2 14.5334 18.8 14.5334 15.85C14.5334 12.8334 16.9668 10.3834 20.0001 10.3834C23.0168 10.3834 25.4668 12.8334 25.4668 15.85C25.4501 18.8 23.1334 21.2 20.2001 21.3Z"
+              stroke="#005100"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M31.2333 32.3C28.2666 35.0166 24.3333 36.6666 19.9999 36.6666C15.6666 36.6666 11.7333 35.0166 8.7666 32.3C8.93327 30.7333 9.93327 29.2 11.7166 28C16.2833 24.9666 23.7499 24.9666 28.2833 28C30.0666 29.2 31.0666 30.7333 31.2333 32.3Z"
+              stroke="#005100"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19.9999 36.6666C29.2047 36.6666 36.6666 29.2047 36.6666 20C36.6666 10.7952 29.2047 3.33331 19.9999 3.33331C10.7952 3.33331 3.33325 10.7952 3.33325 20C3.33325 29.2047 10.7952 36.6666 19.9999 36.6666Z"
+              stroke="#005100"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </Link>
         <button onClick={Logout} className="bg-myDarkGreen font-semibold px-6 py-3 text-white rounded-[14px] hover:bg-myGreen1 transition-all duration-200 ease-in-out">
           Logout
         </button>

@@ -59,7 +59,7 @@ const Tour = () => {
           </h1>
           <p className="text-[18px]">Explore more about the destination!</p>
         </div>
-        <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-x-8 gap-y-10">
+        <div className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-x-6 gap-y-10">
           <Card />
         </div>
       </section>
