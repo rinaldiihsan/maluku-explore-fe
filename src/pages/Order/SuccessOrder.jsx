@@ -1,4 +1,3 @@
-// Profile.js
 import React, { useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
@@ -7,25 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Layouts/Navbar/Navbar';
 import Footer from '../../components/Layouts/Footer/Footer';
 
-const Card = () => {
-  return (
-    <div className="bg-white shadow-lg rounded p-6 max-w-md mx-auto sm:max-w-lg md:max-w-xl lg:max-w-2xl">
-      <img
-        className="rounded-full w-107 h-auto mx-auto mb-2"
-        src="/profile.svg"
-        alt="Profile"
-      />
-      <h2 className="text-3xl font-semibold mb-2 text-center">Rinaldi Ihsan Setiawan</h2>
-      <p className="font-poppins mb-2 text-center">rinaldiihsan@gmail.com</p>
-      <p className="font-poppins text-center">081233211233211</p>
-      <p className="font-poppins text-center mt-6">
-        Lorem ipsum dolor sit amet consectetur. Netus massa lectus egestas faucibus. Nec libero arcu pellentesque posuere amet. Aliquam et volutpat neque laoreet. Ultricies vitae ante a nibh porttitor gravida.
-      </p>
-    </div>
-  );
-};
-
-const Profile = () => {
+const SuccessOrder = () => {
   const [token, setToken] = useState('');
   const [expire, setExpire] = useState('');
   const Navigate = useNavigate();
@@ -57,7 +38,6 @@ const Profile = () => {
         config.headers.Authorization = `Bearer ${response.data.accessToken}`;
         setToken(response.data.accessToken);
         const decoded = jwtDecode(response.data.accessToken);
-
         setExpire(decoded.exp);
       }
       return config;
@@ -68,12 +48,18 @@ const Profile = () => {
   );
 
   return (
-    <div>
+    <>
       <Navbar />
-      <Card />
+      <div className="p-10 flex flex-col items-center justify-center h-screen">
+        <h1 className="text-4xl font-clashDisplay font-semibold mb-5">Success Order Tiket!</h1>
+        <img src="/success.svg" alt="Success Order Tiket" className="w-481 h-486 mt-5 mb-5" />
+        <p className="font-clashDisplay text-center text-2xl mt-5">Check your order history to get the ticket QR Code</p>
+        <p className="font-clashDisplay text-center text-2xl mb-8">Thanks for buying a ticket from us!</p>
+        <a href="/ticket-history" className="bg-myDarkGreen hover:bg-myGreen1 text-white font-clashDisplay font-semibold py-2 px-4 rounded-lg">Go to Ticket History</a>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default Profile;
+export default SuccessOrder;

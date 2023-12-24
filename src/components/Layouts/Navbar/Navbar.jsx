@@ -5,10 +5,10 @@ import axios from 'axios';
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [DropdownProfile, setDropdownProfile] = useState(false);
 
   const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
+    setDropdownProfile(!DropdownProfile);
   };
 
   const logout = async () => {
@@ -69,7 +69,7 @@ const Navbar = () => {
               />
           </svg>
           
-          {isDropdownOpen && (
+          {DropdownProfile && (
             <div className="absolute top-12 right-0 mt-2 w-40 bg-white rounded-md shadow-md overflow-hidden">
               <NavLink to="/profile" className="block px-4 py-2 text-myDarkGreen hover:bg-myGreen1">
                 Profile

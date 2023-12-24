@@ -9,6 +9,7 @@ import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 import TourDetail from './pages/Tour/TourDetail';
 import OrderHistory from './pages/Order/OrderHistory';
+import SuccessOrder from './pages/Order/SuccessOrder';
 import Profile from './pages/Profile/Profile';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
           <Route path="/tour-detail/:id" element={<TourDetail />} />
           <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/success-order" element={<SuccessOrder />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
