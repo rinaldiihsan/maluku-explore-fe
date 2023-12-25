@@ -11,6 +11,8 @@ import TourDetail from './pages/Tour/TourDetail';
 import OrderHistory from './pages/Order/OrderHistory';
 import SuccessOrder from './pages/Order/SuccessOrder';
 import Profile from './pages/Profile/Profile';
+import OrderTicket from './pages/Order/OrderTicket';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -26,8 +28,10 @@ function App() {
           <Route path="/blog-detail/:id" element={<BlogDetail />} />
           <Route path="/tour-detail/:id" element={<TourDetail />} />
           <Route path="/order-history" element={<OrderHistory />} />
+          <Route path="/order-ticket/:id" element={<OrderTicket />} />
           <Route path="/success-order" element={<SuccessOrder />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/not-found" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

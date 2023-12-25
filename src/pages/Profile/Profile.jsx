@@ -1,4 +1,3 @@
-// Profile.js
 import React, { useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
@@ -6,27 +5,13 @@ import { useNavigate } from 'react-router-dom';
 
 import Navbar from '../../components/Layouts/Navbar/Navbar';
 import Footer from '../../components/Layouts/Footer/Footer';
-
-const Card = () => {
-  return (
-    <div className="bg-white shadow-lg rounded p-6 max-w-md mx-auto sm:max-w-lg md:max-w-xl lg:max-w-2xl">
-      <img
-        className="rounded-full w-107 h-auto mx-auto mb-2"
-        src="/profile.svg"
-        alt="Profile"
-      />
-      <h2 className="text-3xl font-semibold mb-2 text-center">Rinaldi Ihsan Setiawan</h2>
-      <p className="font-poppins mb-2 text-center">rinaldiihsan@gmail.com</p>
-      <p className="font-poppins text-center">081233211233211</p>
-      <p className="font-poppins text-center mt-6">
-        Lorem ipsum dolor sit amet consectetur. Netus massa lectus egestas faucibus. Nec libero arcu pellentesque posuere amet. Aliquam et volutpat neque laoreet. Ultricies vitae ante a nibh porttitor gravida.
-      </p>
-    </div>
-  );
-};
+import Card from '../../components/Profile/Card';
 
 const Profile = () => {
   const [token, setToken] = useState('');
+  const [namaLengkap, setNamaLengkap] = useState('');
+  const [email, setEmail] = useState('');
+  const [deskrpsi, setDeskripsi] = useState('');
   const [expire, setExpire] = useState('');
   const Navigate = useNavigate();
 
@@ -39,6 +24,9 @@ const Profile = () => {
       const response = await axios.get('http://localhost:3000/auth/token');
       setToken(response.data.accessToken);
       const decoded = jwtDecode(response.data.accessToken);
+      setNamaLengkap(decoded.namaLengkap);
+      setEmail(decoded.email);
+      setDeskripsi(decoded.deskripsi);
       setExpire(decoded.exp);
     } catch (err) {
       if (err.response) {
@@ -70,7 +58,7 @@ const Profile = () => {
   return (
     <div>
       <Navbar />
-      <Card />
+      <Card namaLengkap={namaLengkap} email={email} deskripsi={deskrpsi} />
       <Footer />
     </div>
   );

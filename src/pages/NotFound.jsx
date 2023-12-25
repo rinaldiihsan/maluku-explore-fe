@@ -3,10 +3,10 @@ import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-import Navbar from '../../components/Layouts/Navbar/Navbar';
-import Footer from '../../components/Layouts/Footer/Footer';
+import Navbar from '../components/Layouts/Navbar/Navbar';
+import Footer from '../components/Layouts/Footer/Footer';
 
-const SuccessOrder = () => {
+const NotFound = () => {
   const [token, setToken] = useState('');
   const [expire, setExpire] = useState('');
   const Navigate = useNavigate();
@@ -51,12 +51,12 @@ const SuccessOrder = () => {
     <>
       <Navbar />
       <div className="p-10 flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-clashDisplay font-semibold mb-5">Success Order Tiket!</h1>
-        <img src="/success.svg" alt="Success Order Tiket" className="w-481 h-486 mt-5 mb-5" />
-        <p className="font-clashDisplay text-center text-2xl mt-5 font-medium">Check your order history to get the ticket QR Code</p>
-        <p className="font-clashDisplay text-center text-2xl mb-8 font-medium">Thanks for buying a ticket from us!</p>
-        <a href="/order-history" className="bg-myDarkGreen hover:bg-myGreen1 text-white font-semibold py-2 px-4 rounded-lg font-poppins transition-all duration-200 ease-in-out">
-          Go to Ticket History
+        <h1 className="text-4xl font-clashDisplay font-semibold mb-5">Umh, Im so sorry this page Not Found</h1>
+        <img src="/notfound.svg" alt="Success Order Tiket" className="w-450 h-430 mt-5 mb-5" />
+        <p className="font-clashDisplay text-center text-2xl mt-5 font-medium">Sorry, we are currently improving this page.</p>
+        <p className="font-clashDisplay text-center text-2xl mb-8 font-medium">Sorry to disappoint you🙏🏻</p>
+        <a href="/home" className="bg-myDarkGreen hover:bg-myGreen1 text-white font-semibold py-2 px-4 rounded-lg font-poppins transition-all duration-200 ease-in-out">
+          Go back to home
         </a>
       </div>
       <Footer />
@@ -64,4 +64,4 @@ const SuccessOrder = () => {
   );
 };
 
-export default SuccessOrder;
+export default NotFound;
