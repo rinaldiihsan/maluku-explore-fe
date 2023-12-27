@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import './Navbar.css';
 import axios from 'axios';
 
 const Navbar = () => {
@@ -23,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar flex flex-col tablet:flex-row justify-between font-poppins items-center py-[30px] fixed tablet:sticky tablet:top-0 bg-myWhite w-[100%]">
+    <nav className="navbar flex flex-col tablet:flex-row justify-between font-poppins items-center py-[30px] fixed tablet:sticky tablet:top-0 bg-myWhite w-[100%] z-[99]">
       <Link to="/home" className="navbar-logo w-[220px] mb-5 tablet:mb-0">
         <img src="/logo.svg" alt="Maluku Explore" />
       </Link>

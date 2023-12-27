@@ -37,10 +37,10 @@ const Card = () => {
         <>
           {blogs.map((blog) => (
             <React.Fragment key={blog.id}>
-              <div className="relative max-w-[380px]">
+              <div className="relative">
                 <Link to={`/blog-detail/${blog.id}`}>
-                  <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-[0.3] rounded-[50px]"></div>
-                  <img src={getImageUrl(blog.imageId)} alt={blog.title} className="rounded-[50px]" />
+                  <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-[0.3] rounded-[50px] w-[360px]"></div>
+                  <img src={getImageUrl(blog.imageId)} alt={blog.title} className="rounded-[50px] w-[360px] h-[230px]" />
                   <div className="absolute top-[63%] left-0 right-0 bottom-0 flex flex-col text-white font-poppins px-7">
                     <p className="text-[15px]">{new Date(blog.createdAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                     <h2 className="font-semibold text-[16px]">{blog.title}</h2>

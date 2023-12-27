@@ -55,8 +55,8 @@ const SuccessOrder = () => {
         <img src="/success.svg" alt="Success Order Tiket" className="w-481 h-486 mt-5 mb-5" />
         <p className="font-clashDisplay text-center text-2xl mt-5 font-medium">Check your order history to get the ticket QR Code</p>
         <p className="font-clashDisplay text-center text-2xl mb-8 font-medium">Thanks for buying a ticket from us!</p>
-        <a href="/order-history" className="bg-myDarkGreen hover:bg-myGreen1 text-white font-semibold py-2 px-4 rounded-lg font-poppins transition-all duration-200 ease-in-out">
-          Go to Ticket History
+        <a href="/home" className="bg-myDarkGreen hover:bg-myGreen1 text-white font-semibold py-2 px-4 rounded-lg font-poppins transition-all duration-200 ease-in-out">
+          Go to Home
         </a>
       </div>
       <Footer />
