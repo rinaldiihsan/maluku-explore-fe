@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { jwtDecode } from 'jwt-decode';
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 
 import Navbar from '../../components/Layouts/Navbar/Navbar';
 import Footer from '../../components/Layouts/Footer/Footer';
 
 const OrderHistory = () => {
+  const [orders, setOrders] = useState([]);
+  const [error, setError] = useState('');
   const [token, setToken] = useState('');
   const [expire, setExpire] = useState('');
-  const Navigate = useNavigate();
+  const [userId, setUserId] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     refreshToken();
@@ -18,39 +21,54 @@ const OrderHistory = () => {
   const refreshToken = async () => {
     try {
       const response = await axios.get('http://localhost:3000/auth/token');
-      setToken(response.data.accessToken);
-      const decoded = jwtDecode(response.data.accessToken);
+      const { accessToken } = response.data; // Destructure accessToken directly
+      setToken(accessToken);
+      const decoded = jwtDecode(accessToken);
       setExpire(decoded.exp);
+      setUserId(decoded.id);
+      fetchOrders(decoded.id);
     } catch (err) {
       if (err.response) {
-        Navigate('/');
+        navigate('/');
       }
     }
   };
 
-  const axiosJWT = axios.create();
+  const fetchOrders = async (userId) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/order/get/?userId=${userId}`);
 
-  axiosJWT.interceptors.request.use(
-    async (config) => {
-      const currentDate = new Date();
-      if (expire * 1000 < currentDate.getTime()) {
-        const response = await axios.get('http://localhost:3000/auth/token');
-        config.headers.Authorization = `Bearer ${response.data.accessToken}`;
-        setToken(response.data.accessToken);
-        const decoded = jwtDecode(response.data.accessToken);
-
-        setExpire(decoded.exp);
+      if (response.data && response.data.data) {
+        setOrders(response.data.data);
+      } else {
+        setError('Format respons tidak valid. Harap gunakan properti "data".');
       }
-      return config;
-    },
-    (error) => {
-      return Promise.reject(error);
+    } catch (error) {
+      console.error('Error mengambil data order:', error);
+      setError('Error mengambil data order. Silakan coba lagi nanti.');
     }
-  );
+  };
+
   return (
     <>
       <Navbar />
-
+      <section className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-x-6 gap-y-10">
+        <div className="flex flex-col max-w-[380px] rounded-[28px] px-4 py-7 gap-y-2" style={{ outline: '3px solid #000' }}>
+          <h2>Riwayat Pesanan Anda</h2>
+          {orders.length > 0 ? (
+            orders.map((order) => (
+              <div key={order.id}>
+                <p>ID Pesanan: {order.id}</p>
+                <p>Jumlah Tiket: {order.jumlahTiket}</p>
+                <p>Total Harga: {order.totalHarga}</p>
+                <p>Tanggal Pesanan: {new Date(order.tanggalOrder).toLocaleDateString()}</p>
+              </div>
+            ))
+          ) : (
+            <p>Tidak ada pesanan yang ditemukan.</p>
+          )}
+        </div>
+      </section>
       <Footer />
     </>
   );

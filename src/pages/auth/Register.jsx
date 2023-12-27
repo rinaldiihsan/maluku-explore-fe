@@ -7,6 +7,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [namaLengkap, setNamaLengkap] = useState('');
   const [password, setPassword] = useState('');
+  const [deskripsi, setDeskripsi] = useState('');
   const navigate = useNavigate();
 
   const signUp = async (e) => {
@@ -15,6 +16,7 @@ const Register = () => {
       await axios.post('http://localhost:3000/auth/register', {
         namaLengkap: namaLengkap,
         email: email,
+        deskripsi: deskripsi,
         password: password,
       });
       navigate('/');
@@ -37,6 +39,16 @@ const Register = () => {
           <input type="text" required placeholder="Name" className="px-12 py-4 rounded-[18px] bg-[#FAFAFA]" style={{ border: '3px solid #F1ECEC' }} value={namaLengkap} onChange={(e) => setNamaLengkap(e.target.value)} />
           <input type="email" required placeholder="Email" className="px-12 py-4 rounded-[18px] bg-[#FAFAFA]" style={{ border: '3px solid #F1ECEC' }} value={email} onChange={(e) => setEmail(e.target.value)} />
           <input type="password" required placeholder="Password" className="px-12 py-4 rounded-[18px] bg-[#FAFAFA]" style={{ border: '3px solid #F1ECEC' }} value={password} onChange={(e) => setPassword(e.target.value)} />
+          <textarea
+            required
+            placeholder="Deksripsi Calon Wisatawan"
+            cols="30"
+            rows="5"
+            className="px-12 py-5 rounded-[18px] bg-[#FAFAFA]"
+            style={{ border: '3px solid #F1ECEC' }}
+            value={deskripsi}
+            onChange={(e) => setDeskripsi(e.target.value)}
+          ></textarea>
           <button type="submit" className="w-fit bg-myDarkGreen font-semibold text-white py-4 px-10 rounded-[18px] mt-5 hover:bg-myGreen1 transition-all duration-200 ease-in-out flex items-center justify-center gap-2">
             Sign Up
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -53,7 +65,7 @@ const Register = () => {
           </Link>
         </p>
       </div>
-      <div className="max-w-[355px]">
+      <div className="max-w-[355px] hidden tablet:block">
         <img src={featuresImage} alt="features" />
       </div>
     </div>

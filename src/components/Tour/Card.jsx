@@ -30,15 +30,15 @@ const Card = () => {
   };
 
   return (
-    <section className="flex flex-col max-w-[380px] rounded-[28px] px-4 py-7 gap-y-2" style={{ outline: '3px solid #000' }}>
+    <div className="flex flex-col max-w-[380px] rounded-[28px] px-4 py-7 gap-y-2" style={{ outline: '3px solid #000' }}>
       {error ? (
         <p>{error}</p>
       ) : (
         <>
           {tours.map((tour) => (
-            <React.Fragment key={tour.id}>
-              <img src={getImageUrl(tour.imageId)} alt={tour.nama} className="w-[380px] h-[225px]" />
-              <h2 className="font-semibold text-[20px]">{tour.nama}</h2>
+            <div key={tour.id} className="mb-8">
+              <img src={getImageUrl(tour.imageId)} alt={tour.nama} className="w-full h-[225px] rounded-xl mb-4" />
+              <h2 className="font-semibold text-[20px] mb-2">{tour.nama}</h2>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-x-2">
                   <svg width="25" height="25" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,11 +59,11 @@ const Card = () => {
                   See Details
                 </Link>
               </div>
-            </React.Fragment>
+            </div>
           ))}
         </>
       )}
-    </section>
+    </div>
   );
 };
 

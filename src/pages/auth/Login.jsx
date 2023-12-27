@@ -52,7 +52,7 @@ const Login = () => {
           </Link>
         </p>
       </div>
-      <div className="max-w-[355px]">
+      <div className="max-w-[355px] hidden tablet:block">
         <img src={featuresImage} alt="features" />
       </div>
     </div>

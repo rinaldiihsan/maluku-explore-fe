@@ -3,13 +3,13 @@ import featuresImage from '../../assets/features.png';
 
 const Features = () => {
   return (
-    <section className="section3 flex justify-between font-poppins items-center py-[70px] mx-auto gap-x-7">
+    <section className="section3 flex flex-col tablet:flex-row justify-between font-poppins items-center py-[70px] mx-auto gap-x-7">
       <div className="flex flex-col">
         <h2 className="font-semibold text-[18px]">Easy and Fast</h2>
         <h1 className="font-semibold text-[35px] font-clashDisplay">Best Feature For You</h1>
         <div className="flex flex-col mt-3 gap-y-7">
           <div className="flex gap-x-4 items-center">
-            <div className="bg-myGreen2 p-5 rounded-[16px]">
+            <div className="bg-myGreen2 p-3 tablet:p-5 rounded-[16px]">
               <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M24.9974 41.1459H19.4141C16.9974 41.1459 14.8932 39.6876 14.0599 37.4376C13.2057 35.1876 13.8307 32.7084 15.6432 31.1042L32.2891 16.5417C33.2891 15.6667 33.3099 14.4792 33.0182 13.6667C32.7057 12.8542 31.9141 11.9792 30.5807 11.9792H24.9974C24.1432 11.9792 23.4349 11.2709 23.4349 10.4167C23.4349 9.56258 24.1432 8.85425 24.9974 8.85425H30.5807C32.9974 8.85425 35.1016 10.3126 35.9349 12.5626C36.7891 14.8126 36.1641 17.2917 34.3516 18.8959L17.7057 33.4584C16.7057 34.3334 16.6849 35.5209 16.9766 36.3334C17.2891 37.1459 18.0807 38.0209 19.4141 38.0209H24.9974C25.8516 38.0209 26.5599 38.7292 26.5599 39.5834C26.5599 40.4376 25.8516 41.1459 24.9974 41.1459Z"
@@ -26,12 +26,12 @@ const Features = () => {
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="font-bold text-[21px]">Choose Destinations</h3>
-              <p className="text-[17px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate voluptas ipsam id iste non!</p>
+              <h3 className="font-bold text-[17px] tablet:text-[21px]">Choose Destinations</h3>
+              <p className="text-[15px] tablet:text-[17px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate voluptas ipsam id iste non!</p>
             </div>
           </div>
           <div className="flex gap-x-4 items-center">
-            <div className="bg-myGreen3 p-5 rounded-[16px]">
+            <div className="bg-myGreen3 p-3 tablet:p-5 rounded-[16px]">
               <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M34.8958 7.41675V4.16675C34.8958 3.31258 34.1875 2.60425 33.3333 2.60425C32.4792 2.60425 31.7708 3.31258 31.7708 4.16675V7.29175H18.2292V4.16675C18.2292 3.31258 17.5208 2.60425 16.6667 2.60425C15.8125 2.60425 15.1042 3.31258 15.1042 4.16675V7.41675C9.47917 7.93758 6.75 11.2917 6.33333 16.2709C6.29167 16.8751 6.79167 17.3751 7.375 17.3751H42.625C43.2292 17.3751 43.7292 16.8542 43.6667 16.2709C43.25 11.2917 40.5208 7.93758 34.8958 7.41675Z"
@@ -44,12 +44,12 @@ const Features = () => {
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="font-bold text-[21px]">Choose Date</h3>
-              <p className="text-[17px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate voluptas ipsam id iste non!</p>
+              <h3 className="font-bold text-[17px] tablet:text-[21px]">Choose Date</h3>
+              <p className="text-[15px] tablet:text-[17px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate voluptas ipsam id iste non!</p>
             </div>
           </div>
           <div className="flex gap-x-4 items-center">
-            <div className="bg-myGreen2 p-5 rounded-[16px]">
+            <div className="bg-myGreen2 p-3 tablet:p-5 rounded-[16px]">
               <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M23.4375 38.0208H18.75C16.4583 38.0208 14.5833 39.8958 14.5833 42.1875V42.7083H12.5C11.6458 42.7083 10.9375 43.4167 10.9375 44.2708C10.9375 45.125 11.6458 45.8333 12.5 45.8333H37.5C38.3542 45.8333 39.0625 45.125 39.0625 44.2708C39.0625 43.4167 38.3542 42.7083 37.5 42.7083H35.4167V42.1875C35.4167 39.8958 33.5417 38.0208 31.25 38.0208H26.5625V33.25C26.0417 33.3125 25.5208 33.3333 25 33.3333C24.4792 33.3333 23.9583 33.3125 23.4375 33.25V38.0208Z"
@@ -62,13 +62,13 @@ const Features = () => {
               </svg>
             </div>
             <div className="flex flex-col">
-              <h3 className="font-bold text-[21px]">Happy Journey</h3>
-              <p className="text-[17px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate voluptas ipsam id iste non!</p>
+              <h3 className="font-bold text-[17px] tablet:text-[21px]">Happy Journey</h3>
+              <p className="text-[15px] tablet:text-[17px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus voluptate voluptas ipsam id iste non!</p>
             </div>
           </div>
         </div>
       </div>
-      <img src={featuresImage} alt="Feature Image" width={370} />
+      <img src={featuresImage} alt="Feature Image" className="w-[full]" />
     </section>
   );
 };
